@@ -4,7 +4,7 @@
 subplot(2,1,1)
 plot(tout,yout(:,2));
 xlabel('time (seconds)');
-ylabel('\Delta P_C(pu)');
+ylabel('\Delta P_L(pu)');
 axis([0 11 -0.05 0.25]);
 
 % Plot of frequency reponse of system
@@ -15,4 +15,5 @@ ylabel('\Delta f (Hertz)');
 axis([0 11 -0.02 0]);
 
 % Save a copy of the simulimk model
+ModelName = 'single_area_model_P_control';
 print(['-s',ModelName],'-dsvg',[ModelName,'.svg'])
